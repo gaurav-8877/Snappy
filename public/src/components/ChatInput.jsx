@@ -112,7 +112,7 @@ const Container = styled.div`
       color: white;
       border: none;
       padding-left: 1rem;
-      font-size: 1.2rem;
+      font-size: 0.9rem;
 
       &::selection {
         background-color: #9a86f3;
@@ -132,11 +132,11 @@ const Container = styled.div`
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
         svg {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       }
       svg {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: white;
       }
     }

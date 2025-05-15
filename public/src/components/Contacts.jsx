@@ -144,7 +144,7 @@ const Container = styled.div`
       gap: 0.5rem;
       .username {
         h2 {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       }
     }

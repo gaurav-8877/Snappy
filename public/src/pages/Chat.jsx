@@ -28,8 +28,32 @@ export default function Chat() {
   useEffect(() => {
     if (currentUser) {
       socket.current = io(host);
-      socket.current.emit("add-user", currentUser._id);
+
+      // Add connection event listeners for debugging
+      socket.current.on("connect", () => {
+        console.log("Socket connected successfully");
+        // Emit the add-user event after successful connection
+        socket.current.emit("add-user", currentUser._id);
+      });
+
+      socket.current.on("connect_error", (error) => {
+        console.error("Socket connection error:", error);
+      });
+
+      socket.current.on("disconnect", (reason) => {
+        console.log("Socket disconnected:", reason);
+      });
     }
+
+    // Cleanup function
+    return () => {
+      if (socket.current) {
+        socket.current.off("connect");
+        socket.current.off("connect_error");
+        socket.current.off("disconnect");
+        socket.current.disconnect();
+      }
+    };
   }, [currentUser]);
 
   useEffect(async () => {

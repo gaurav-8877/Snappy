@@ -10,6 +10,7 @@ body,
 button,
 input {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 14px; /* Added smaller base font size */
 }
 
 body {

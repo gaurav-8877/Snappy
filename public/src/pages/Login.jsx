@@ -131,7 +131,7 @@ const FormContainer = styled.div`
     border-radius: 0.4rem;
     color: white;
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.85rem;
     &:focus {
       border: 0.1rem solid #997af0;
       outline: none;
@@ -145,7 +145,7 @@ const FormContainer = styled.div`
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.4rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     &:hover {
       background-color: #4e0eff;
